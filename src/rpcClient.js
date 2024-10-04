@@ -31,3 +31,20 @@ const sendRpcRequest = async (method, params = []) => {
   }
 };
 
+const getBalance = async (publicKey) => {
+  return await sendRpcRequest('getBalance', [publicKey]);
+};
+
+const getTransaction = async (transactionSignature) => {
+  return await sendRpcRequest('getTransaction', [transactionSignature]);
+};
+
+const getProgramAccounts = async (programId) => {
+  return await sendRpcRequest('getProgramAccounts', [programId]);
+};
+
+
+
+
+
+
