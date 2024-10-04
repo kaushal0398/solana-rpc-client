@@ -11,4 +11,4 @@ function getKeypairFromEnvironment(key) {
     return Keypair.fromSecretKey(secretKeyBytes);
 }
 
-
+module.exports = { getKeypairFromEnvironment };
