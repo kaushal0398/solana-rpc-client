@@ -33,6 +33,9 @@ const run = async () => {
     const epochInfo = await getEpochInfo();
     console.log('Epoch info:', epochInfo);
 
+    const slot = await getSlot();
+    console.log('Current slot:', slot);
+
     const signatures = await getConfirmedSignaturesForAddress2(publicKey);
     console.log('Confirmed signatures for address:', signatures);
   } catch (error) {
