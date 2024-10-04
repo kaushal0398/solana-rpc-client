@@ -27,6 +27,9 @@ const run = async () => {
     const blockHeight = await getBlockHeight();
     console.log('Current block height:', blockHeight);
 
+    const clusterNodes = await getClusterNodes();
+    console.log('Cluster nodes:', clusterNodes);
+
     const signatures = await getConfirmedSignaturesForAddress2(publicKey);
     console.log('Confirmed signatures for address:', signatures);
   } catch (error) {
