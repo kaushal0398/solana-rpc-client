@@ -66,7 +66,8 @@ module.exports = {
   getTransaction,
   getProgramAccounts,
   getBlockHeight,
-  getClusterNodes
+  getClusterNodes,
+  getEpochInfo
 };
 
 
