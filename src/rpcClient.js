@@ -1,3 +1,5 @@
+// src/rpcClient.js
+
 require('dotenv').config();
 const axios = require('axios');
 
@@ -28,15 +30,4 @@ const sendRpcRequest = async (method, params = []) => {
     throw error;
   }
 };
-
-const getBalance = async (publicKey) => {
-  return await sendRpcRequest('getBalance', [publicKey]);
-};
-
-const getRecentBlockhash = async () => {
-  return await sendRpcRequest('getRecentBlockhash');
-};
-
-
-
 
