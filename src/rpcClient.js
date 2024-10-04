@@ -43,8 +43,11 @@ const getProgramAccounts = async (programId) => {
   return await sendRpcRequest('getProgramAccounts', [programId]);
 };
 
+const getBlockHeight = async () => {
+  return await sendRpcRequest('getBlockHeight');
+};
 
-
-
-
+const getClusterNodes = async () => {
+  return await sendRpcRequest('getClusterNodes');
+};
 
