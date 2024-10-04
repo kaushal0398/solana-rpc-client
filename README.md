@@ -7,5 +7,3 @@ This repository contains a simple **Solana RPC Client** built in **Node.js** to 
 - **Fetch Mint Info**: Retrieve information about a specific mint account.
 - **Secure Key Management**: Uses **dotenv** to store keys securely in environment variables.
 - **Cluster Flexibility**: Connect to any Solana cluster (Devnet, Testnet, Mainnet).
-
-
