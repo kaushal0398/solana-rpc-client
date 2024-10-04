@@ -22,5 +22,14 @@ describe('Solana RPC Client', () => {
     const balance = await getBalance(mockPublicKey);
     expect(balance).toBe(1000000);
   });
-}
+
+  test('getConfirmedSignaturesForAddress2 should return confirmed signatures', async () => {
+    const mockPublicKey = 'MockPublicKey';
+    axios.post.mockResolvedValue(mockResponse({ result: ['Signature1', 'Signature2'] }));
+
+    const signatures = await getConfirmedSignaturesForAddress2(mockPublicKey);
+    expect(signatures).toHaveLength(2);
+    expect(signatures).toContain('Signature1');
+  });
+});
 
