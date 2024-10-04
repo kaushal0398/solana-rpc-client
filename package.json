@@ -1,0 +1,12 @@
+{
+  "name": "solana-rpc-client",
+  "version": "1.0.0",
+  "description": "This repository contains a simple **Solana RPC Client** built in **Node.js** to interact with the Solana blockchain via JSON-RPC. The client enables developers to query balances, fetch mint information, and communicate with the Solana Devnet/Mainnet/Testnet using environment variables for secure key management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
