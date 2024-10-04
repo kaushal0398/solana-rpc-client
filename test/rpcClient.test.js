@@ -22,6 +22,11 @@ describe('Solana RPC Client', () => {
     const balance = await getBalance(mockPublicKey);
     expect(balance).toBe(1000000);
   });
+
+  test('getTransaction should return transaction details', async () => {
+    const mockTransactionSignature = 'MockTransactionSignature';
+    axios.post.mockResolvedValue(mockResponse({ result: { slot: 12345, transaction: {} } }));
+
     const transaction = await getTransaction(mockTransactionSignature);
     expect(transaction).toHaveProperty('slot', 12345);
   });
