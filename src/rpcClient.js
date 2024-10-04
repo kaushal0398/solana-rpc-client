@@ -42,8 +42,4 @@ const sendRawTransaction = async (transaction) => {
   return await sendRpcRequest('sendTransaction', [transaction]);
 };
 
-module.exports = {
-  getBalance,
-  getRecentBlockhash,
-  sendRawTransaction
-};
+
