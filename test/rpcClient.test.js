@@ -23,6 +23,13 @@ describe('Solana RPC Client', () => {
     expect(balance).toBe(1000000);
   });
 
+  test('getSlot should return the current slot', async () => {
+    axios.post.mockResolvedValue(mockResponse({ result: 5000000 }));
+
+    const slot = await getSlot();
+    expect(slot).toBe(5000000);
+  });
+
   test('getConfirmedSignaturesForAddress2 should return confirmed signatures', async () => {
     const mockPublicKey = 'MockPublicKey';
     axios.post.mockResolvedValue(mockResponse({ result: ['Signature1', 'Signature2'] }));
