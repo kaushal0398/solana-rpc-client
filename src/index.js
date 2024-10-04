@@ -30,6 +30,9 @@ const run = async () => {
     const clusterNodes = await getClusterNodes();
     console.log('Cluster nodes:', clusterNodes);
 
+    const epochInfo = await getEpochInfo();
+    console.log('Epoch info:', epochInfo);
+
     const signatures = await getConfirmedSignaturesForAddress2(publicKey);
     console.log('Confirmed signatures for address:', signatures);
   } catch (error) {
