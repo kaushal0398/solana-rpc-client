@@ -65,7 +65,8 @@ module.exports = {
   getBalance,
   getTransaction,
   getProgramAccounts,
-  getBlockHeight
+  getBlockHeight,
+  getClusterNodes
 };
 
 
