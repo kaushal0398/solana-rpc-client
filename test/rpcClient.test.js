@@ -23,6 +23,14 @@ describe('Solana RPC Client', () => {
     expect(balance).toBe(1000000);
   });
 
+  test('getEpochInfo should return the current epoch info', async () => {
+    axios.post.mockResolvedValue(mockResponse({ result: { epoch: 100, slotIndex: 50 } }));
+
+    const epochInfo = await getEpochInfo();
+    expect(epochInfo).toHaveProperty('epoch', 100);
+    expect(epochInfo).toHaveProperty('slotIndex', 50);
+  });
+
   test('getSlot should return the current slot', async () => {
     axios.post.mockResolvedValue(mockResponse({ result: 5000000 }));
 
