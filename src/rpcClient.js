@@ -29,12 +29,10 @@ const sendRpcRequest = async (method, params = []) => {
   }
 };
 
-// Get account balance in lamports for a given public key
 const getBalance = async (publicKey) => {
   return await sendRpcRequest('getBalance', [publicKey]);
 };
 
-// Get the recent blockhash to use in transactions
 const getRecentBlockhash = async () => {
   return await sendRpcRequest('getRecentBlockhash');
 };
