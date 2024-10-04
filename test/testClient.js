@@ -11,7 +11,7 @@ try {
     console.log('Recent blockhash:', blockhash);
 } catch (error) {
     console.error('Test failed:', error.message);
- }
+}
 };
 
 testRpcClient();
