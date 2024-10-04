@@ -1,9 +1,6 @@
 const {
   getBalance,
   getTransaction,
-  getProgramAccounts,
-  getBlockHeight,
-  getClusterNodes,
   getEpochInfo,
   getSlot,
   getConfirmedSignaturesForAddress2
