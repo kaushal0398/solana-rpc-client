@@ -37,9 +37,6 @@ const getRecentBlockhash = async () => {
   return await sendRpcRequest('getRecentBlockhash');
 };
 
-// Send a signed transaction to the Solana network
-const sendRawTransaction = async (transaction) => {
-  return await sendRpcRequest('sendTransaction', [transaction]);
-};
+
 
 
