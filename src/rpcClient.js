@@ -64,7 +64,8 @@ const getConfirmedSignaturesForAddress2 = async (publicKey, options = {}) => {
 module.exports = {
   getBalance,
   getTransaction,
-  getProgramAccounts
+  getProgramAccounts,
+  getBlockHeight
 };
 
 
