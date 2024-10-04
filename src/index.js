@@ -3,6 +3,7 @@ const {
   getTransaction,
   getProgramAccounts,
   getBlockHeight,
+  getClusterNodes,
   getEpochInfo,
   getSlot,
   getConfirmedSignaturesForAddress2
