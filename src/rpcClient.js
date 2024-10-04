@@ -68,7 +68,8 @@ module.exports = {
   getBlockHeight,
   getClusterNodes,
   getEpochInfo,
-  getSlot
+  getSlot,
+  getConfirmedSignaturesForAddress2
 };
 
 
