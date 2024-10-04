@@ -22,6 +22,9 @@ describe('Solana RPC Client', () => {
     const balance = await getBalance(mockPublicKey);
     expect(balance).toBe(1000000);
   });
+    const transaction = await getTransaction(mockTransactionSignature);
+    expect(transaction).toHaveProperty('slot', 12345);
+  });
 
   test('getProgramAccounts should return program accounts', async () => {
     const mockProgramId = 'MockProgramId';
