@@ -23,6 +23,13 @@ describe('Solana RPC Client', () => {
     expect(balance).toBe(1000000);
   });
 
+  test('getBlockHeight should return the current block height', async () => {
+    axios.post.mockResolvedValue(mockResponse({ result: 1500000 }));
+
+    const blockHeight = await getBlockHeight();
+    expect(blockHeight).toBe(1500000);
+  });
+
   test('getClusterNodes should return the cluster nodes', async () => {
     axios.post.mockResolvedValue(mockResponse({ result: [{ pubkey: 'Node1' }] }));
 
