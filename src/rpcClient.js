@@ -1,5 +1,3 @@
-// src/rpcClient.js
-
 require('dotenv').config();
 const axios = require('axios');
 
@@ -62,4 +60,12 @@ const getSlot = async () => {
 const getConfirmedSignaturesForAddress2 = async (publicKey, options = {}) => {
   return await sendRpcRequest('getConfirmedSignaturesForAddress2', [publicKey, options]);
 };
+
+module.exports = {
+  getBalance,
+};
+
+
+
+
 
