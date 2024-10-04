@@ -24,6 +24,9 @@ const run = async () => {
     const programAccounts = await getProgramAccounts(programId);
     console.log('Program accounts:', programAccounts);
 
+    const blockHeight = await getBlockHeight();
+    console.log('Current block height:', blockHeight);
+
     const signatures = await getConfirmedSignaturesForAddress2(publicKey);
     console.log('Confirmed signatures for address:', signatures);
   } catch (error) {
