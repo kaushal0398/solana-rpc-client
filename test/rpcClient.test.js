@@ -23,6 +23,15 @@ describe('Solana RPC Client', () => {
     expect(balance).toBe(1000000);
   });
 
+  test('getProgramAccounts should return program accounts', async () => {
+    const mockProgramId = 'MockProgramId';
+    axios.post.mockResolvedValue(mockResponse({ result: [{ pubkey: 'Account1' }, { pubkey: 'Account2' }] }));
+
+    const programAccounts = await getProgramAccounts(mockProgramId);
+    expect(programAccounts).toHaveLength(2);
+    expect(programAccounts[0]).toHaveProperty('pubkey', 'Account1');
+  });
+
   test('getBlockHeight should return the current block height', async () => {
     axios.post.mockResolvedValue(mockResponse({ result: 1500000 }));
 
