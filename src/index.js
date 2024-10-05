@@ -1,4 +1,5 @@
 const {
+  getBalance,
   getTransaction,
   getProgramAccounts,
   getBlockHeight,
