@@ -9,6 +9,11 @@ const {
   getConfirmedSignaturesForAddress2
 } = require('./rpcClient');
 
+const run = async () => {
+  const publicKey = process.env.PUBLIC_KEY;  
+  const transactionSignature = 'YourTransactionSignatureHere';  
+  const programId = 'YourProgramIdHere';  
+
   try {
     const balance = await getBalance(publicKey);
     console.log(`Balance for ${publicKey}: ${balance} lamports`);
