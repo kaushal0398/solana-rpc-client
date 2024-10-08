@@ -11,8 +11,7 @@ const {
 
 const run = async () => {
   const publicKey = process.env.PUBLIC_KEY;  
-  const transactionSignature = 'YourTransactionSignatureHere';  
-  const programId = 'YourProgramIdHere';  
+  const transactionSignature = 'YourTransactionSignatureHere';   
 
   try {
     const balance = await getBalance(publicKey);
