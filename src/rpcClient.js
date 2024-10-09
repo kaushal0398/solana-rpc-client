@@ -57,10 +57,6 @@ const getSlot = async () => {
   return await sendRpcRequest('getSlot');
 };
 
-const getConfirmedSignaturesForAddress2 = async (publicKey, options = {}) => {
-  return await sendRpcRequest('getConfirmedSignaturesForAddress2', [publicKey, options]);
-};
-
 module.exports = {
   getBalance,
   getTransaction,
