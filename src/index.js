@@ -24,15 +24,6 @@ const run = async () => {
     const programAccounts = await getProgramAccounts(programId);
     console.log('Program accounts:', programAccounts);
 
-    const blockHeight = await getBlockHeight();
-    console.log('Current block height:', blockHeight);
-
-    const clusterNodes = await getClusterNodes();
-    console.log('Cluster nodes:', clusterNodes);
-
-    const epochInfo = await getEpochInfo();
-    console.log('Epoch info:', epochInfo);
-
     const slot = await getSlot();
     console.log('Current slot:', slot);
 
