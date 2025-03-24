@@ -33,7 +33,7 @@ const run = async () => {
     const epochInfo = await getEpochInfo();
     console.log('Epoch info:', epochInfo);
 
-  } catch (error) {
+      } catch (error) {
     console.error('Error:', error.message);
   }
 };
