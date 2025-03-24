@@ -27,7 +27,9 @@ const run = async () => {
     const blockHeight = await getBlockHeight();
     console.log('Current block height:', blockHeight);
 
-    
+    const clusterNodes = await getClusterNodes();
+    console.log('Cluster nodes:', clusterNodes);
+
   } catch (error) {
     console.error('Error:', error.message);
   }
