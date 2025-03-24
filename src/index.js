@@ -29,6 +29,9 @@ const run = async () => {
 
     const clusterNodes = await getClusterNodes();
     console.log('Cluster nodes:', clusterNodes);
+    
+    const epochInfo = await getEpochInfo();
+    console.log('Epoch info:', epochInfo);
 
   } catch (error) {
     console.error('Error:', error.message);
