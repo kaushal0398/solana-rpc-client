@@ -1,6 +1,6 @@
 const {
   getBalance,
-  ,
+  getTransaction,
   getProgramAccounts,
   getBlockHeight,
   getClusterNodes,
