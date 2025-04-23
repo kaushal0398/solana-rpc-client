@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const axios = require('axios');
 
 const RPC_URL = process.env.RPC_URL || 'https://api.mainnet-beta.solana.com';
